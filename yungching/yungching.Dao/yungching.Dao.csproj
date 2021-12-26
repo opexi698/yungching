@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EDACD0A3-198A-4D98-9C49-043E9710320D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>yungching.Dao</RootNamespace>
     <AssemblyName>yungching.Dao</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -32,8 +32,33 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DaoInterface\IEmployeesDao.cs" />
+    <Compile Include="DaoTools.cs" />
+    <Compile Include="Dao\EmployeesDao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\yungching.Model\yungching.Model.csproj">
+      <Project>{d1f72d3c-d264-4319-8c0c-72116f09b6be}</Project>
+      <Name>yungching.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\yungching.WebBase\yungching.WebBase.csproj">
+      <Project>{bc7135fb-59d0-45a2-a46d-1a384eeecb2b}</Project>
+      <Name>yungching.WebBase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
