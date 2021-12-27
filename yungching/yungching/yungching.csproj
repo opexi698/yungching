@@ -117,6 +117,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -179,9 +180,17 @@
     <Content Include="Scripts\jquery-3.6.0.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\yungching.Model\yungching.Model.csproj">
+      <Project>{d1f72d3c-d264-4319-8c0c-72116f09b6be}</Project>
+      <Name>yungching.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\yungching.Service\yungching.Service.csproj">
       <Project>{99915142-adae-4b60-90a3-b425060dc100}</Project>
       <Name>yungching.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\yungching.WebBase\yungching.WebBase.csproj">
+      <Project>{BC7135FB-59D0-45A2-A46D-1A384EEECB2B}</Project>
+      <Name>yungching.WebBase</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
